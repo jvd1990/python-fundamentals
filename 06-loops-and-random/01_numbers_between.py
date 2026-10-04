@@ -1,8 +1,8 @@
-start = int(input("Enter the first number: "))
-end = int(input("Enter the second number: "))
+number_1 = int(input("Enter the first number: "))
+number_2 = int(input("Enter the second number: "))
 
-if start > end:
-    start, end = end, start
+minimum = min(number_1, number_2)
+maximum = max(number_1, number_2)
 
-for number in range(start + 1, end):
+for number in range(minimum, maximum + 1):
     print(number)

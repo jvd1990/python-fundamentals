@@ -1,7 +1,9 @@
-number_1 = int(input("Enter the first number: "))
-number_2 = int(input("Enter the second number: "))
+number_1 = int(input("Enter the first positive integer: "))
+number_2 = int(input("Enter the second positive integer: "))
 
-while number_2 != 0:
-    number_1, number_2 = number_2, number_1 % number_2
+minimum = min(number_1, number_2)
 
-print("Greatest common divisor:", abs(number_1))
+for divisor in range(minimum, 0, -1):
+    if number_1 % divisor == 0 and number_2 % divisor == 0:
+        print("Greatest common divisor:", divisor)
+        break

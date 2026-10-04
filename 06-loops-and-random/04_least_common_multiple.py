@@ -1,12 +1,12 @@
-number_1 = int(input("Enter the first number: "))
-number_2 = int(input("Enter the second number: "))
+number_1 = int(input("Enter the first positive integer: "))
+number_2 = int(input("Enter the second positive integer: "))
 
-multiple = max(number_1, number_2)
+minimum = min(number_1, number_2)
+maximum = max(number_1, number_2)
 
-while True:
-    if multiple % number_1 == 0 and multiple % number_2 == 0:
-        break
+multiple = maximum
 
-    multiple += 1
+while multiple % minimum != 0:
+    multiple += maximum
 
 print("Least common multiple:", multiple)
